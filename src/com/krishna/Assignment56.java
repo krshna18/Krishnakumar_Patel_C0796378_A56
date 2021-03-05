@@ -19,7 +19,7 @@ public class Assignment56 {
         String uname="Will123";
         String pword="Will@2021";
 
-        int attemptNum=0;
+        int attempt=0;
         int attemptLeft=3;
         Object[] detail = {
                 "Username: ", user_Name,
@@ -28,7 +28,7 @@ public class Assignment56 {
 
 
 
-        while(attemptNum<2)
+        while(attempt<2)
         {
             JOptionPane.showMessageDialog(null, detail, "Login", JOptionPane.PLAIN_MESSAGE);
             if (user_Name.getText().equals(uname) && password.getText().equals(pword)) {
@@ -40,14 +40,14 @@ public class Assignment56 {
             {
                 user_Name.setText("");
                 password.setText("");
-                attemptNum++;
+                attempt++;
                 attemptLeft--;
                 if (attemptLeft != 0){
                     JOptionPane.showMessageDialog(null, "You have only" + attemptLeft + " left", "Warning", JOptionPane.PLAIN_MESSAGE);
                 }
             }
         }
-        if (attemptNum == 3) {
+        if (attempt == 3) {
             JOptionPane.showMessageDialog(null, "You have exceeds maximum attempts for login, please try later after some time", "oopsss!!!", JOptionPane.PLAIN_MESSAGE);
         }
 
